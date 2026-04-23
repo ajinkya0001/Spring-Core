@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+    
+    <bean id="coff" class="com.spring.core.di.xml.Coffee">
+		    
+    </bean>
+    
+    <bean id="per" class="com.spring.core.di.xml.Person">
+    <!-- using bean id of coffee in ref attribute -->
+    	<property name="coffee" ref="coff">
+    	</property>
+    </bean>
+    
+    
+    <bean id="cgr" class="com.spring.core.di.xml.Charger">
+		    
+    </bean>
+    <bean id="mob" class="com.spring.core.di.xml.Mobile">
+		    <constructor-arg name="charger" ref="cgr"></constructor-arg>
+    </bean>
+
+	<bean id="wat" class="com.spring.core.di.xml.Water"></bean>
+	
+	<bean id="bot" class="com.spring.core.di.xml.Bottle">
+		<constructor-arg name="water" ref="wat"></constructor-arg>
+	</bean>
+	
+	<bean id="bok" class="com.spring.core.di.xml.Books"></bean>
+	<bean id="bag" class="com.spring.core.di.xml.Bag">
+		<constructor-arg name="book" ref="bok"></constructor-arg>
+	</bean>
+	
+	
+</beans>
+

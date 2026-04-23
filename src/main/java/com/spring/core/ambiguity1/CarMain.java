@@ -1,0 +1,20 @@
+package com.spring.core.ambiguity1;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class CarMain {
+
+	public static void main(String[] args) {
+		
+//		ApplicationContext ctx = new AnnotationConfigApplicationContext(CarConfig.class);
+		ApplicationContext ctx = new ClassPathXmlApplicationContext("AmbiguityCar.xml");
+		
+		
+		
+		Car car1 = ctx.getBean(Car.class);
+		car1.carName();
+	}
+
+}

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+    
+    <!-- autowire-candidate="false"  this statement is just used to disqualify the petrol engine  -->
+    <bean id="pengine" class="com.spring.core.ambiguity1.PetrolEngine" autowire-candidate="false">
+		    
+    </bean>
+    <bean id="dengine" class="com.spring.core.ambiguity1.DieselEngine">
+		    
+    </bean>
+    
+    <!--  Matching Bean Id with Reference name (Similar to @Qualifier) -->
+ <!--    <bean id="car" class="com.spring.core.ambiguity1.Car" autowire="byName">  -->
+    <bean id="car" class="com.spring.core.ambiguity1.Car" autowire="byType">
+		    
+    </bean>
+    
+    
+
+</beans>
+

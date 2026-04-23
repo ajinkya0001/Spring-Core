@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+    
+    <bean id="msg" class="com.spring.core.xml.Message">
+    
+    
+    </bean>
+   <!-- <bean id="lap" class="com.spring.core.xml.Laptop">
+    	<constructor-arg index="0" value="au300h"></constructor-arg>
+    	<constructor-arg index="1" value="HP"></constructor-arg>
+    	<constructor-arg index="2" value="16"></constructor-arg>
+    	<constructor-arg index="3" value="512"></constructor-arg>
+    </bean> -->
+    
+    <bean id="laptop" class="com.spring.core.xml.Laptop">
+    	<property name="lcode" value="au4500h"></property>
+    	<property name="company" value="Lenovo"></property>
+    	<property name="ram" value="16"></property>
+    	<property name="rom" value="512"></property>
+    
+    </bean>
+    
+    <bean id="per" class="com.spring.core.xml.Person">
+    	<property name="pname" value="Ravikumar"></property>
+    	<property name="age" value="23"></property>    
+    	<property name="city" value="Ligappagarapalli"></property>    
+    </bean>
+    
+  <!--  <bean id="bike" class="com.spring.core.xml.Bike">
+    	<constructor-arg name="bikeName" value="Ninja ZX10R"></constructor-arg>
+    	<constructor-arg name="brand" value="Kawasaki"></constructor-arg>
+    	<constructor-arg name="cc" value="1000"></constructor-arg>
+    </bean>  --> 
+    
+    <bean id="bike" class="com.spring.core.xml.Bike">
+    	<constructor-arg index="0" value="Ninja ZX10R"></constructor-arg>
+    	<constructor-arg index="1" value="Kawasaki"></constructor-arg>
+    	<constructor-arg index="2" value="1000"></constructor-arg>
+    </bean>
+
+</beans>
+
+
+<!-- for giving the name and int for that aslo we need to pass it in double quote only -->
+
